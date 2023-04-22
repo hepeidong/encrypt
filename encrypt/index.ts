@@ -66,7 +66,7 @@ export class Encrypt {
     }
 
     private static async createRSA() {
-        const keyPair = await window.crypto.subtle.generateKey(
+        const keyPair = await crypto.subtle.generateKey(
             {
               name: "RSA-OAEP",
               modulusLength: 2048,
