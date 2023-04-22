@@ -2,13 +2,9 @@ import { AESCBC } from "./AESCBC";
 import { AESCTR } from "./AESCTR";
 import { AESGCM } from "./AESGCM";
 import { RSAOAEP } from "./RSAOAEP";
-import { EncryptAlgorithm } from "./EncryptAlgorithm";
+import { Encode, EncryptAlgorithm } from "./EncryptAlgorithm";
 import { Md5 } from "./md5";
 
-type Encode = {
-    byteLength: number;
-    encode: string[];
-}
 
 const ENCRYPT_NAME = ["AES-CBC", "AES-CTR", "AES-GCM"];
 
