@@ -2,7 +2,7 @@ import { AESCBC } from "./AESCBC";
 import { AESCTR } from "./AESCTR";
 import { AESGCM } from "./AESGCM";
 import { RSAOAEP } from "./RSAOAEP";
-import { Encode, EncryptAlgorithm } from "./EncryptAlgorithm";
+import { Encode, IAlgorithm } from "./EncryptAlgorithm";
 import { Md5 } from "./md5";
 
 
@@ -13,7 +13,7 @@ export class Encrypt {
         return Md5.instance.getMd5(str);
     }
 
-    private static _algorithm: EncryptAlgorithm;
+    private static _algorithm: IAlgorithm;
     public static initEncrypt(type: Encrypt.Type) {
         switch (type) {
             case Encrypt.Type.AES_CBC:

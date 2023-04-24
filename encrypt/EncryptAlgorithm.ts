@@ -4,7 +4,7 @@ export type Encode = {
     encode: string[];
 }
 
-interface IAlgorithm {
+export interface IAlgorithm {
     encrypt(data: string): Promise<Encode>;
     decrypt(encode: Encode): Promise<string>;
 }
@@ -17,12 +17,12 @@ export class EncryptAlgorithm<T = any> implements IAlgorithm {
     }
 
 
-    encrypt(data: string): Promise<Encode> {
-        return undefined;
+    encrypt(data: string): any {
+        return null;
     }
 
-    decrypt(encode: Encode): Promise<string> {
-        return undefined;
+    decrypt(encode: Encode): any {
+        return null;
     }
 
     private utf8ArrayToStr(array: Uint8Array) {
